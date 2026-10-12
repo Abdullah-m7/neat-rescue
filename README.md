@@ -80,7 +80,7 @@ The real agent run requires Entire's `entire-graph` executable at `.tools/entire
 
 | Required tool | Implemented role | Submission evidence |
 |---|---|---|
-| **neatlogs** | Python SDK agent/workflow/tool tracing | SDK wiring and **local Doctor v2 passed again on Oct 12**; see evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json. **Authenticated cloud traces are not yet confirmed** |
+| **neatlogs** | Python SDK agent/workflow/tool tracing | **Doctor v2 local PASS**, plus [real synthetic SQLite 4→1→3 replay with traced tool calls](evidence/NEATLOGS_REAL_SYNTHETIC_REPLAY_LOCAL_20261012.json); [cloud proof setup](docs/NEATLOGS_CLOUD_PROOF_SETUP.md) ready. **Authenticated cloud readback still pending project key** |
 | **Entire** | Coding checkpoints and actual source-graph context | Recorded checkpoint and graph output; context consumed in agent run |
 | **cfo.ai** | Pricing, costs, revenue and runway planning | **Original files supplied by SFAB on Oct 12:** [12-page business plan PDF](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Business_Plan.pdf) and [financial-model XLSX](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Financial_Model.xlsx). [Key findings](docs/cfo_ai/KEY_FINDINGS.md) and [provenance](docs/cfo_ai/CFO_AI_PROVENANCE.md). Figures are **hypothetical**. |
 

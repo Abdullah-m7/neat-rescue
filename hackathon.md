@@ -83,3 +83,11 @@ Official rules: https://neatlogs.com/hackathon ; build skill: https://neatlogs.c
 ## Oct 12 official organizer submission email (newer than generic rules)
 
 Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced official @neatlogs launch X post with three accounts tagged in the quote — @neatlogs, @EntireHQ, @arithecfo — and (2) fill the distinct official submission form whose link is released at the same time. Submitting a form alone or omitting a required tag means the automated submission detector will NOT detect the entry. Live schedule: 7–11:55 PM IST, or 4:30–9:25 PM Saudi. Registered team SFAB has been added. Official form submission receipt remains pending. See docs/NEATHACK_FORM_READY.md and docs/X_SUBMISSION_DRAFT.txt.
+
+
+### Oct 12: Neatlogs real-workflow local replay
+
+- Added a real application-level instrumentation entry point: `python -m neatrescue.trace_replay --local`, with one `WORKFLOW` and three tool wrappers around SQLite commit/reopen/retry checks.
+- Verified 4 faulty, 1 incomplete and 3 accepted payments; the accepted candidate passed all 8 independent ledger invariants. **No new model call** is made by this deterministic verification run.
+- Published [sanitized replay results](evidence/NEATLOGS_REAL_SYNTHETIC_REPLAY_LOCAL_20261012.json), [source](neatrescue/trace_replay.py) and [project-key setup](docs/NEATLOGS_CLOUD_PROOF_SETUP.md).
+- SDK Doctor local v2 PASS; the controlled hosted probe returned `CREDENTIAL_MISSING` because the project API key is not installed. Thus authenticated Neatlogs cloud delivery is **NOT YET confirmed**.
