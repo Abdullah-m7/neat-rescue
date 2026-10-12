@@ -1,0 +1,56 @@
+{
+  "format_version": "neatrescue/neatlogs-live-replay/v1",
+  "checked_at_utc": "2026-10-12T11:55:51.643611+00:00",
+  "mode": "local",
+  "trace_name": "neatrescue.synthetic-refund-acceptance-gate",
+  "trace_id": null,
+  "local_trace_id_valid": true,
+  "synthetic": true,
+  "source": "Actual 3-candidate bounded SQLite replay, NOT a fresh LLM run",
+  "model_calls_in_this_replay": 0,
+  "cases": [
+    {
+      "candidate": "faulty",
+      "protocol": "ledger-replay/v1",
+      "source_sha256": "733ef231cbd703df0e8e9f6de14bb089028135b8fca7f7750cb92c7328e3e346",
+      "scenario_sha256": "18cdfca0d13cb3957137f12d1ca62ec7edbcf29fa48138fafc1d51dfe5e2f66b",
+      "payment_rows": 4,
+      "passed": false,
+      "passed_invariants": 5,
+      "total_invariants": 8,
+      "committed_row_read_after_reopen": true,
+      "synthetic": true,
+      "no_production_changes": true
+    },
+    {
+      "candidate": "incomplete",
+      "protocol": "ledger-replay/v1",
+      "source_sha256": "893877d676c1eebf9671658fe3830f1dfc7d62b0e641ac1f62605555f2c6a194",
+      "scenario_sha256": "18cdfca0d13cb3957137f12d1ca62ec7edbcf29fa48138fafc1d51dfe5e2f66b",
+      "payment_rows": 1,
+      "passed": false,
+      "passed_invariants": 3,
+      "total_invariants": 8,
+      "committed_row_read_after_reopen": true,
+      "synthetic": true,
+      "no_production_changes": true
+    },
+    {
+      "candidate": "verified",
+      "protocol": "ledger-replay/v1",
+      "source_sha256": "5e9e62538864f08348ee7f1494f842cd905aef7f92ceef2bccaa28da5a0f255a",
+      "scenario_sha256": "18cdfca0d13cb3957137f12d1ca62ec7edbcf29fa48138fafc1d51dfe5e2f66b",
+      "payment_rows": 3,
+      "passed": true,
+      "passed_invariants": 8,
+      "total_invariants": 8,
+      "committed_row_read_after_reopen": true,
+      "synthetic": true,
+      "no_production_changes": true
+    }
+  ],
+  "sdk_flush_returned": true,
+  "sdk_shutdown_returned": true,
+  "cloud_verified": false,
+  "status": "pass"
+}
