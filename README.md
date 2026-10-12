@@ -82,7 +82,7 @@ The real agent run requires Entire's `entire-graph` executable at `.tools/entire
 |---|---|---|
 | **neatlogs** | Python SDK agent/workflow/tool tracing | SDK wiring and **local Doctor v2 passed again on Oct 12**; see evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json. **Authenticated cloud traces are not yet confirmed** |
 | **Entire** | Coding checkpoints and actual source-graph context | Recorded checkpoint and graph output; context consumed in agent run |
-| **cfo.ai** | Pricing, costs, revenue and runway planning | Account activation reported Oct 12; [model prompt and export workflow](docs/cfo_ai/QUICK_START.md) prepared. **Actual saved model/report still pending and not claimed as sponsor proof** |
+| **cfo.ai** | Pricing, costs, revenue and runway planning | Participant reported adding a payment method Oct 12; [model prompt and export workflow](docs/cfo_ai/QUICK_START.md) prepared. **Actual saved model/report still pending and not claimed as sponsor proof** |
 
 The hackathon explicitly requires all three. We won't pretend the submission is fully compliant without cloud traces and a real cfo.ai plan.
 
