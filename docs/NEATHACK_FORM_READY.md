@@ -12,7 +12,7 @@
 
 **Public demo:** https://neatrescue-demo-2026.onrender.com/
 
-**Direct 2:10 judge video (all three sponsors):** https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_20261012.mp4
+**Direct 2:10 judge video (all three sponsors):** https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_130s.mp4
 
 **Short project description (paste to form):**
 

@@ -14,7 +14,7 @@ Owner-dependent, DO NOT mark as done until verified:
 
 Public repo and site are **DONE**: https://github.com/Abdullah-m7/neat-rescue and https://neatrescue-demo-2026.onrender.com/ (Render deploy successful, page and MP4 HTTP 200). The team check-in and X quote/form submission are still pending. Neatlogs cloud-readback proof and cfo.ai output are published. No X publication, cfo.ai billing or subscription actions were performed.
 
-Video to submit: **media/NeatRescue_SFAB_Judge_Demo_20261012.mp4**, exported English-narrated 130-second visual evidence film with explicit Neatlogs, Entire and cfo.ai segments. H264/AAC 1600x900; Kokoro narrator. Visual cards cite real proof and are not live sponsor dashboard screen recordings. Prior 90-second version remains backup.
+Video to submit: **media/NeatRescue_SFAB_Judge_Demo_130s.mp4**, exported English-narrated 130-second visual evidence film with explicit Neatlogs, Entire and cfo.ai segments. H264/AAC 1600x900; Kokoro narrator. Visual cards cite real proof and are not live sponsor dashboard screen recordings. Prior 90-second version remains backup.
 
 ## CRITICAL CLARIFICATION — direct organizer email on Oct 12
 

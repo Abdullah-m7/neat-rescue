@@ -10,15 +10,15 @@
     "participant check-in confirmation",
     "official X quote submission"
   ],
-  "video_primary": "media/NeatRescue_SFAB_Judge_Demo_20261012.mp4",
+  "video_primary": "media/NeatRescue_SFAB_Judge_Demo_130s.mp4",
   "video_primary_duration_seconds": 130.04,
-  "video_primary_sha256": "6c0ad00d787235718f1e600267395e09ffb57db80dde32f5c7804d3abf2ac678",
+  "video_primary_sha256": "19cf748d2aef1260c7960667932f5295f5197c6c0400200ab592d266b207d555",
   "neatlogs_doctor_local_v2": "PASS 2026-10-12",
   "external_publishing": "GITHUB_PUBLIC_AND_RENDER_LIVE",
   "cfo_ai_output": "SFAB-provided original PDF/XLSX published in docs/cfo_ai; direct dashboard proof not independently verified",
   "public_repository": "https://github.com/Abdullah-m7/neat-rescue",
   "public_demo": "https://neatrescue-demo-2026.onrender.com/",
-  "public_video": "https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_20261012.mp4",
+  "public_video": "https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_130s.mp4",
   "render_static_service": "srv-db6ah667bikc73c5ng10",
   "render_live_verified_at_utc": "2026-10-12T09:30:39Z",
   "checked_outside_platform": {
@@ -44,5 +44,7 @@
     "claim_boundary": "A real instrumented synthetic SQLite replay, not new LLM inference or real payments"
   },
   "video_previous": "media/NeatRescue_VOICE_CUT_90s.mp4",
-  "video_sponsor_evidence_cards": "Neatlogs verified readback; Entire recorded context; cfo.ai user-provided original PDF and XLSX"
+  "video_sponsor_evidence_cards": "Neatlogs verified readback; Entire recorded context; cfo.ai user-provided original PDF and XLSX",
+  "video_caption_vtt": "media/NeatRescue_SFAB_Judge_Demo_130s.vtt",
+  "video_replaces_superseded_draft": "NeatRescue_SFAB_Judge_Demo_20261012.mp4"
 }

@@ -95,3 +95,7 @@ Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced 
 ## Oct 12 15:20+ KSA — Neatlogs authenticated cloud success
 
 GitHub Actions [strict run 38249294070](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070) passed 117 tests, SDK Doctor v2, a hosted finalized probe, and a separately materialized NeatRescue synthetic SQLite replay. The readback showed exactly 4 correctly typed/named spans (workflow and 3 tool calls), matching its generated trace ID. [Raw sanitized diagnostic outputs](evidence/neatlogs_cloud_20261012/README.md) are public. No API key was published. This confirms only real tool/workflow tracing during the new deterministic replay, not new LLM execution or live payment activity.
+
+## Oct 12 — corrected final competition video
+
+The **2:10 narrated, captioned sponsor-evidence video** replaces an immediately superseded render whose final static status card had stale sponsor claims. The revised version ends with a new, fully supported summary: Entire code context recorded, authenticated Neatlogs cloud trace readback verified, and original cfo.ai PDF/Excel published. The original synthetic 4→1→3 narrative is preserved. These proof cards are rendered summaries of linked records, not captured vendor account sessions. Video: [NeatRescue_SFAB_Judge_Demo_130s.mp4](media/NeatRescue_SFAB_Judge_Demo_130s.mp4); [English WebVTT captions](media/NeatRescue_SFAB_Judge_Demo_130s.vtt).

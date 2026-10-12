@@ -1,0 +1,85 @@
+1
+00:00:00,400 --> 00:00:05,650
+A refund isn't just a row in a database.
+On the other side... someone is waiting.
+
+2
+00:00:09,400 --> 00:00:15,510
+In our simulated case, the payment went through.
+The confirmation didn't. So the system tried again.
+
+3
+00:00:17,400 --> 00:00:21,400
+Three valid refunds. Four payments.
+Something had to change.
+
+4
+00:00:23,400 --> 00:00:30,020
+The quick fix stopped the duplicate.
+But two legitimate refunds disappeared with it.
+
+5
+00:00:32,400 --> 00:00:34,740
+The error was gone.
+The harm wasn't.
+
+6
+00:00:37,608 --> 00:00:41,782
+NeatRescue asks a different question.
+What else did this fix break?
+
+7
+00:00:43,817 --> 00:00:52,292
+The agent reads the source, chooses diagnostics,
+and replays the failure. A separate verifier checks the patch.
+
+8
+00:00:54,025 --> 00:01:01,502
+In this recorded case: three valid refunds,
+three payments. No duplicate. No legitimate request left out.
+
+9
+00:01:02,817 --> 00:01:09,735
+After an interruption, the same saved test plan resumes.
+A rejected patch doesn't get a new lottery.
+
+10
+00:01:12,317 --> 00:01:20,681
+A direct prompt fixed this example too.
+Our claim isn't a smarter model.
+It's a controlled decision with inspectable evidence.
+
+11
+00:01:23,525 --> 00:01:29,450
+We verified Neatlogs end to end. One workflow
+and three tool calls were persisted.
+
+12
+00:01:29,450 --> 00:01:34,080
+Then read back from the cloud,
+with 117 tests passing.
+
+13
+00:01:35,220 --> 00:01:40,140
+Entire provided real source context
+to the investigating agent.
+
+14
+00:01:40,140 --> 00:01:45,820
+We recorded the code graph and checkpoints
+as evidence, not just a sponsor logo.
+
+15
+00:01:46,710 --> 00:01:54,270
+cfo.ai produced a twelve-month plan
+with pricing, costs, revenue and runway.
+
+16
+00:01:54,270 --> 00:02:02,000
+Those projections are hypothetical. Today,
+we have zero customers, zero sales, and zero cash.
+
+17
+00:02:03,150 --> 00:02:06,792
+NeatRescue.
+A fix should work for the next customer, too.
