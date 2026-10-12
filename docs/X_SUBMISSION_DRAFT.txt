@@ -1,5 +1,5 @@
 neatHack 2026 — OFFICIAL QUOTE-TWEET DRAFT
-Do NOT post standalone. Quote the @neatlogs official launch post released Oct 12, 7:00 PM IST (4:30 PM Saudi).
+Do NOT quote an earlier instructions/reminder tweet. Quote the NEW official @neatlogs LAUNCH post published at 7:00 PM IST (4:30 PM Saudi) on Oct 12; the organizer also requires ATTACHING THE DEMO VIDEO FILE in the quote itself.
 Confirmed Luma team name supplied by registrant: SFAB. No placeholder remains. Recheck on X before posting.
 
 NeatRescue SFAB
@@ -9,6 +9,6 @@ Demo: https://neatrescue-demo-2026.onrender.com
 @neatlogs @EntireHQ @arithecfo #neatHack
 
 Confirmed SFAB quote length: 259 characters before X weighted-URL counting. X URL counting may differ.
-Both steps are required: (1) quote-tweet tagging all 3 accounts in quote text; (2) official submission form from organizers.
+Both steps are required: (1) quote-tweet the official launch post, ATTACH the actual 130-second demo video file directly to the quote, and tag @neatlogs @EntireHQ @arithecfo inside the quote text; (2) fill the separate official submission form. The site link by itself is not a substitute for the video attachment. Verified MP4: https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_130s.mp4
 The team's launch-post and form links are not known until released; do not invent them.
 Do not claim submission is detected until BOTH steps are complete and receipts saved.

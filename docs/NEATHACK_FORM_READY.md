@@ -30,7 +30,7 @@ NeatRescue is an AI-agent investigation and independent release-gate prototype. 
 
 - [ ] Capture link to OFFICIAL @neatlogs X launch post, released at opening.
 - [x] Use the registered team name SFAB in docs/X_SUBMISSION_DRAFT.txt and check length.
-- [ ] Quote-tweet with @neatlogs, @EntireHQ, @arithecfo all IN THE QUOTE.
+- [ ] At or after **4:30 PM Saudi on Oct 12**, quote the **new official launch post**, attach the actual 130-second MP4 video (not just a link), and include @neatlogs, @EntireHQ, @arithecfo all IN THE QUOTE.
 - [ ] Save published quote-tweet permalink.
 - [ ] Open OFFICIAL organizer form, fill the description and paste BOTH public links plus quote permalink if asked.
 - [ ] Submit form successfully and preserve receipt/screenshot.
