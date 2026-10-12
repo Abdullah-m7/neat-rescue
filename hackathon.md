@@ -15,7 +15,7 @@
 - Python 3.11; bounded AST source evaluation; SQLite (transaction commit/reopen/retry); Python unit tests; Claude CLI model-driven tool selection.
 - **Entire**: agent coding checkpoints and source graph context used in the investigated source trace. Curated evidence in `evidence/ENTIRE_CHECKPOINT.json`.
 - **Neatlogs SDK**: local instrumentation of agent, LLM and tool calls. Local Doctor v2 returned PASS on Oct 12 with 4 captured spans. **Cloud delivery to authenticated project is NOT verified.** See `evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json`.
-- **cfo.ai**: pricing, costs, revenue and runway plan still needs to be **generated inside cfo.ai**. `docs/CFO_PASTE_INTO_APP.md` is a model-input prompt only, not sponsor proof.
+- **cfo.ai**: team SFAB participant reported adding a payment method on Oct 12. [Financial-model request and export instructions](docs/cfo_ai/QUICK_START.md) are prepared. The actual pricing/cost/revenue/runway model must still be **generated inside cfo.ai**, exported and verified; instructions alone are not sponsor proof.
 - Recorded demo rendered with English Kokoro voice-over; cinematic opening image in webpage is a labeled synthetic Adobe Firefly illustration. No real customers or real money.
 
 ## Dated build log
