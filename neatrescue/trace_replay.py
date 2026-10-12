@@ -85,7 +85,9 @@ def _readback(trace_id: str, api_key: str, endpoint: str) -> dict:
         if not isinstance(parsed, dict):
             return {"status": "fail", "reason": "READBACK_INVALID_SCHEMA"}
         spans = parsed.get("spans")
-        names = [s.get("name") for s in spans if isinstance(s, dict)] if isinstance(spans, list) else []
+        nodes = [s for s in spans if isinstance(s, dict)] if isinstance(spans, list) else []
+        names = [str(s.get("node_name") or s.get("span_name") or s.get("name") or "") for s in nodes]
+        kinds = [str(s.get("node_type") or s.get("span_type") or "").lower() for s in nodes]
         if parsed.get("_id") != trace_id:
             return {"status": "fail", "reason": "TRACE_ID_MISMATCH"}
         if len(names) < 4:
@@ -94,7 +96,9 @@ def _readback(trace_id: str, api_key: str, endpoint: str) -> dict:
             "status": "pass",
             "trace_id_matches": True,
             "readback_span_count": len(names),
-            "trace_names": [name for name in names if name and name.startswith("neatrescue.")],
+            "trace_names": names,
+            "trace_types": kinds,
+            "materialized_status": str(parsed.get("status") or ""),
         }
     return {"status": "fail", "reason": "READBACK_TIMEOUT"}
 
