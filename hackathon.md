@@ -99,3 +99,7 @@ GitHub Actions [strict run 38249294070](https://github.com/Abdullah-m7/neat-resc
 ## Oct 12 — corrected final competition video
 
 The **2:10 narrated, captioned sponsor-evidence video** replaces an immediately superseded render whose final static status card had stale sponsor claims. The revised version ends with a new, fully supported summary: Entire code context recorded, authenticated Neatlogs cloud trace readback verified, and original cfo.ai PDF/Excel published. The original synthetic 4→1→3 narrative is preserved. These proof cards are rendered summaries of linked records, not captured vendor account sessions. Video: [NeatRescue_SFAB_Judge_Demo_130s.mp4](media/NeatRescue_SFAB_Judge_Demo_130s.mp4); [English WebVTT captions](media/NeatRescue_SFAB_Judge_Demo_130s.vtt).
+
+## Oct 12 — SFAB official submission received
+
+The participant provided a screenshot of the official neatlogs.com confirmation page displaying **SUBMISSION RECEIVED** and **You built it. You shipped it.**, with SFAB as the single-builder team, NeatRescue as project, and checked progress stages: Quote post, Project & team, Review & submit. The form is marked as received by the organizer’s platform. This is **not** confirmation of winning or an independently checked quote-post permalink; the owner should retain the receipt and its associated X quote URL. Receipt identifier is kept out of this public repository.

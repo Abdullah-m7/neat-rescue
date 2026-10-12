@@ -1,4 +1,4 @@
-# neatHack 2026 — submission form copy (NOT submitted)
+# neatHack 2026 — submitted entry reference
 
 **Required from registrant:** registered team name SFAB (user confirmed from Luma), participant name exactly as registered, and form URL announced by organizers Oct 12 at 7:00 PM IST (4:30 PM Saudi).
 
@@ -36,4 +36,4 @@ NeatRescue is an AI-agent investigation and independent release-gate prototype. 
 - [ ] Submit form successfully and preserve receipt/screenshot.
 - [ ] Follow the official Discord final cutoff; scheduled IST window is 7:00–11:55 PM, equivalent 4:30–9:25 PM Saudi.
 
-**Status:** Draft only. Neither an X quote nor a form submission has been performed by this document.
+**Status (Oct 12): SUBMISSION RECEIVED.** The participant provided an organizer confirmation screenshot showing SFAB, NeatRescue, and all three progress stages checked. The quote-post permalink has not been independently retrieved; preserve it with the private receipt. This template is retained for audit, not a pending action.

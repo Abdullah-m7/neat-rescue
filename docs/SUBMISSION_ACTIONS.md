@@ -19,3 +19,7 @@ Video to submit: **media/NeatRescue_SFAB_Judge_Demo_130s.mp4**, exported English
 ## CRITICAL CLARIFICATION — direct organizer email on Oct 12
 
 The organizers explicitly require **BOTH**: quote-tweet the official @neatlogs launch post AND fill their separate submission form, both published at 7 PM IST. The quote MUST tag **@neatlogs @EntireHQ @arithecfo**; the detection system will not recognize an incomplete quote or a form-only submission. Window 7:00–11:55 PM IST = 4:30–9:25 PM Saudi (Discord may override final cutoff). Aim to be among first 50 quote tweets if feasible; accuracy and sponsor proof come first. Form-ready copy: docs/NEATHACK_FORM_READY.md; X draft: docs/X_SUBMISSION_DRAFT.txt.
+
+## Confirmed receipt after submission
+
+**On Oct 12 the participant provided a neatlogs.com screenshot showing SUBMISSION RECEIVED for team SFAB / project NeatRescue**, with all three progress steps checked. Formal organizer form reception is complete. Retain original screenshot and official X quote permalink as private confirmation records. Independent verification of the X quote URL/check-in is not recorded here. The receipt does not prove finalist or winner status.

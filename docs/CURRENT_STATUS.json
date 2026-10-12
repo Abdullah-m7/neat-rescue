@@ -7,8 +7,8 @@
   "video_backup": "media/NeatRescue_Demo_BACKUP_140s.mp4",
   "video_sha256": "be5a35f66df835a93b14a5d15ba02e2a95c06bcc8763762fd0d10069d44c3d86",
   "mandatory_missing": [
-    "participant check-in confirmation",
-    "official X quote submission"
+    "X quote permalink independent verification",
+    "separate check-in status not independently verified"
   ],
   "video_primary": "media/NeatRescue_SFAB_Judge_Demo_130s.mp4",
   "video_primary_duration_seconds": 130.04,
@@ -46,5 +46,19 @@
   "video_previous": "media/NeatRescue_VOICE_CUT_90s.mp4",
   "video_sponsor_evidence_cards": "Neatlogs verified readback; Entire recorded context; cfo.ai user-provided original PDF and XLSX",
   "video_caption_vtt": "media/NeatRescue_SFAB_Judge_Demo_130s.vtt",
-  "video_replaces_superseded_draft": "NeatRescue_SFAB_Judge_Demo_20261012.mp4"
+  "video_replaces_superseded_draft": "NeatRescue_SFAB_Judge_Demo_20261012.mp4",
+  "official_submission": {
+    "date": "2026-10-12",
+    "team": "SFAB",
+    "project": "NeatRescue",
+    "status": "SUBMISSION_RECEIVED",
+    "proof": "Participant-provided screenshot of organizer confirmation page",
+    "progress_stages_shown_checked": [
+      "Quote post",
+      "Project & team",
+      "Review & submit"
+    ],
+    "public_x_quote_permalink": "Not independently supplied to maintainer",
+    "award_status": "Not determined"
+  }
 }
