@@ -12,5 +12,11 @@
     "public repo link",
     "official X quote submission",
     "team check-in confirmation"
-  ]
+  ],
+  "video_primary": "media/NeatRescue_VOICE_CUT_90s.mp4",
+  "video_primary_duration_seconds": 90.33309,
+  "video_primary_sha256": "7b3488b5f431722ed8f251b231b97de04d719857e7f512a27ea72f1a6aaabbe6",
+  "neatlogs_doctor_local_v2": "PASS 2026-10-12",
+  "external_publishing": "NOT DONE",
+  "cfo_ai_output": "NOT DONE"
 }

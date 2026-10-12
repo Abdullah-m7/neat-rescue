@@ -1,6 +1,6 @@
 # NeatRescue — Don't ship a fix that breaks someone else
 
-**neatHack 2026 · solo entry · [Watch the 140-second recorded-evidence demo](media/NeatRescue_Demo_BACKUP_140s.mp4)**
+**neatHack 2026 · solo entry · [Watch the 90-second narrated demo](media/NeatRescue_Demo_BACKUP_140s.mp4)**
 
 An AI-agent repair proposal can make one failing example green while quietly rejecting legitimate customer operations. **NeatRescue investigates the failure, challenges plausible partial repairs, and prevents an unverified patch from being accepted.**
 
@@ -74,13 +74,13 @@ The real agent run requires Entire's `entire-graph` executable at `.tools/entire
 - `evidence/{faulty_adapter,proposed_order_only_fix,accepted_source,direct_source}.py` — compared actual source.
 - `evidence/ENTIRE_CHECKPOINT.json` — recorded Entire checkpoint provenance.
 - `docs/DURABLE_GATE_LEDGER_RESULTS_20261010.md` — design, recovery constraints, failure caveats.
-- `media/NeatRescue_Demo_BACKUP_140s.mp4` — **recorded evidence visualization**, not a filmed live run; the enhanced voice-over edit is pending verification.
+- `media/NeatRescue_VOICE_CUT_90s.mp4` — **90-second English-narrated recorded evidence visualization**, not a filmed live run; voice generated with Kokoro. The silent 140-second backup is retained in the media folder.
 
 ## Sponsor integration status — evidence, not logos
 
 | Required tool | Implemented role | Submission evidence |
 |---|---|---|
-| **neatlogs** | Python SDK agent/workflow/tool tracing | SDK wiring and local doctor checked. **Authenticated cloud traces are not yet confirmed** |
+| **neatlogs** | Python SDK agent/workflow/tool tracing | SDK wiring and **local Doctor v2 passed again on Oct 12**; see evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json. **Authenticated cloud traces are not yet confirmed** |
 | **Entire** | Coding checkpoints and actual source-graph context | Recorded checkpoint and graph output; context consumed in agent run |
 | **cfo.ai** | Pricing, costs, revenue and runway planning | **Resulting plan still pending account access**; locally prepared assumptions are not sponsor proof |
 

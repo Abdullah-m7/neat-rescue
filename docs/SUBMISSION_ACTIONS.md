@@ -14,4 +14,4 @@ Owner-dependent, DO NOT mark as done until verified:
 
 Publishing blocker: GitHub account not currently connected to this chat; local Mac has no configured GitHub CLI credentials. This package is STAGED ONLY, not online. No tweets, subscriptions or payments made by this process.
 
-Video fallback: media/NeatRescue_Demo_BACKUP_140s.mp4, genuine 140-second recorded-evidence visualization. New Adobe cinematic render not confirmed, so do not link it as finished. It has no sponsor dashboard footage; the judged video should include actual sponsor evidence before final publication when available.
+Video to submit: media/NeatRescue_VOICE_CUT_90s.mp4, actual exported English-narrated 90-second visual evidence demo on Oct 12; verified H264/AAC 1600x900. The 140-second silent original remains as backup. Voice is Kokoro preview, not ElevenLabs. Do not claim original customer footage or sponsor dashboards. It has no sponsor dashboard footage; the judged video should include actual sponsor evidence before final publication when available.
