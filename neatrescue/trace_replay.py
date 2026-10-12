@@ -90,8 +90,16 @@ def _readback(trace_id: str, api_key: str, endpoint: str) -> dict:
         kinds = [str(s.get("node_type") or s.get("span_type") or "").lower() for s in nodes]
         if parsed.get("_id") != trace_id:
             return {"status": "fail", "reason": "TRACE_ID_MISMATCH"}
-        if len(names) < 4:
-            return {"status": "fail", "reason": "SPANS_NOT_PRESENT", "readback_span_count": len(names)}
+        expected_spans = {
+            TRACE_NAME: "workflow",
+            "sqlite-replay-faulty": "tool_call",
+            "sqlite-replay-incomplete": "tool_call",
+            "sqlite-replay-verified": "tool_call",
+        }
+        if len(names) != 4 or len(set(names)) != 4 or dict(zip(names, kinds)) != expected_spans:
+            return {"status": "fail", "reason": "TRACE_SEMANTIC_MISMATCH", "readback_span_count": len(names)}
+        if parsed.get("status") != "success":
+            return {"status": "fail", "reason": "TRACE_NOT_FINALIZED"}
         return {
             "status": "pass",
             "trace_id_matches": True,
