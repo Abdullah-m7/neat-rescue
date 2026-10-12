@@ -79,3 +79,7 @@ For the source and ledger evidence, inspect `evidence/PUBLIC_RESULTS.json` and t
 Official rules: https://neatlogs.com/hackathon ; build skill: https://neatlogs.com/hackathon/skill
 
 *This log records what was observed and accomplished; planned sponsor actions are not described as completed.*
+
+## Oct 12 official organizer submission email (newer than generic rules)
+
+Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced official @neatlogs launch X post with three accounts tagged in the quote — @neatlogs, @EntireHQ, @arithecfo — and (2) fill the distinct official submission form whose link is released at the same time. Submitting a form alone or omitting a required tag means the automated submission detector will NOT detect the entry. Live schedule: 7–11:55 PM IST, or 4:30–9:25 PM Saudi. Exact registered team name and form receipt remain pending. See docs/NEATHACK_FORM_READY.md and docs/X_SUBMISSION_DRAFT.txt.
