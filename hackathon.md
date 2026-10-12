@@ -15,7 +15,7 @@
 - Python 3.11; bounded AST source evaluation; SQLite (transaction commit/reopen/retry); Python unit tests; Claude CLI model-driven tool selection.
 - **Entire**: agent coding checkpoints and source graph context used in the investigated source trace. Curated evidence in `evidence/ENTIRE_CHECKPOINT.json`.
 - **Neatlogs SDK**: local instrumentation of agent, LLM and tool calls. Local Doctor v2 returned PASS on Oct 12 with 4 captured spans. **Cloud delivery to authenticated project is NOT verified.** See `evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json`.
-- **cfo.ai**: team SFAB participant reported adding a payment method on Oct 12. [Financial-model request and export instructions](docs/cfo_ai/QUICK_START.md) are prepared. The actual pricing/cost/revenue/runway model must still be **generated inside cfo.ai**, exported and verified; instructions alone are not sponsor proof.
+- **cfo.ai**: SFAB participant provided two financial-model exports on Oct 12, now [published unchanged with checksum provenance](docs/cfo_ai/CFO_AI_PROVENANCE.md): a [12-page PDF](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Business_Plan.pdf) and a [12-sheet XLSX](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Financial_Model.xlsx). The report covers pricing, costs, hypothetical revenue and runway. [Summary](docs/cfo_ai/KEY_FINDINGS.md). Independent cfo.ai dashboard access was not verified.
 - Recorded demo rendered with English Kokoro voice-over; cinematic opening image in webpage is a labeled synthetic Adobe Firefly illustration. No real customers or real money.
 
 ## Dated build log
@@ -70,7 +70,7 @@ For the source and ledger evidence, inspect `evidence/PUBLIC_RESULTS.json` and t
 - [ ] Confirm check-in with the email used on Luma: https://neatlogs.com/hackathon/check-in
 - [ ] Record actual Neatlogs authenticated cloud trace URL/screenshot; never commit an API key.
 - [x] Record Entire checkpoint and source context.
-- [ ] Create and export actual cfo.ai financial plan (pricing, costs, revenue, runway), using `docs/CFO_PASTE_INTO_APP.md`. Account signup may request a card; the owner must consent to billing terms.
+- [x] Received and publicly archived the two participant-supplied cfo.ai financial exports (PDF and XLSX), including prices, costs, hypothetical revenue and runway. Dashboard-origin receipt not independently confirmed.
 - [x] Publish publicly accessible GitHub repo and demo video <=180 seconds.
 - [ ] Update demo to explicitly explain verified use of all three sponsors; do not imply unfinished integrations are complete.
 - [ ] Publish official quote post on X **during the official window** with registered team name, builder name, repository and demo URL. Capture public X permalink.

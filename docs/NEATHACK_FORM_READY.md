@@ -22,7 +22,7 @@ NeatRescue is an AI-agent investigation and independent release-gate prototype. 
 
 - Entire: source graph/context and coding checkpoint evidence recorded.
 - Neatlogs: agent/tool/LLM SDK instrumented; local Doctor v2 PASS; authenticated Neatlogs cloud trace receipt **pending**. Do not claim remote delivery without proof.
-- cfo.ai: detailed business-model input prompt in docs/CFO_PASTE_INTO_APP.md; actual generated plan **pending payment-card/account access**. Do not claim sponsor integration without a real exported report.
+- cfo.ai: SFAB supplied a 12-page business plan PDF and a 12-sheet XLSX forecast workbook on Oct 12, now archived unchanged in docs/cfo_ai/ with SHA-256 provenance, scenario findings and documented hypotheses. Real cfo.ai dashboard session not independently verified. Forecast revenue is not actual revenue.
 
 **Important limits:** Synthetic incident with no customers, real monetary transfers or production authorization; demo is a 90-second recorded evidence visualization narrated using Kokoro, not a filmed live deployment.
 

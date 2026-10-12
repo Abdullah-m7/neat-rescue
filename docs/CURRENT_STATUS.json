@@ -3,12 +3,11 @@
   "base_repo": "NeatRescue/ (curated snapshot)",
   "snapshot_commit": "f58e7a12533ce44405329b081135be4e919a524e",
   "source_unchanged": true,
-  "publication_status": "PRIVATE_LOCAL_STAGING",
+  "publication_status": "PUBLIC_GITHUB_AND_RENDER",
   "video_backup": "media/NeatRescue_Demo_BACKUP_140s.mp4",
   "video_sha256": "be5a35f66df835a93b14a5d15ba02e2a95c06bcc8763762fd0d10069d44c3d86",
   "mandatory_missing": [
     "Neatlogs authenticated cloud trace",
-    "cfo.ai actual export",
     "participant check-in confirmation",
     "official X quote submission"
   ],
@@ -17,7 +16,7 @@
   "video_primary_sha256": "7b3488b5f431722ed8f251b231b97de04d719857e7f512a27ea72f1a6aaabbe6",
   "neatlogs_doctor_local_v2": "PASS 2026-10-12",
   "external_publishing": "GITHUB_PUBLIC_AND_RENDER_LIVE",
-  "cfo_ai_output": "NOT DONE",
+  "cfo_ai_output": "SFAB-provided original PDF/XLSX published in docs/cfo_ai; direct dashboard proof not independently verified",
   "public_repository": "https://github.com/Abdullah-m7/neat-rescue",
   "public_demo": "https://neatrescue-demo-2026.onrender.com/",
   "public_video": "https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4",
