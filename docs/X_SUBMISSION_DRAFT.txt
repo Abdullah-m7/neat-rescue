@@ -1,14 +1,14 @@
 neatHack 2026 — OFFICIAL QUOTE-TWEET DRAFT
 Do NOT post standalone. Quote the @neatlogs official launch post released Oct 12, 7:00 PM IST (4:30 PM Saudi).
-Replace [TEAM] with exact registered Luma team name and recheck 280-char limit.
+Confirmed Luma team name supplied by registrant: SFAB. No placeholder remains. Recheck on X before posting.
 
-NeatRescue [TEAM]
+NeatRescue SFAB
 A quick fix stopped duplicate refunds but blocked valid ones. Our agent caught it: 4 → 1 → 3 (synthetic).
 Code: https://github.com/Abdullah-m7/neat-rescue
 Demo: https://neatrescue-demo-2026.onrender.com
 @neatlogs @EntireHQ @arithecfo #neatHack
 
-Pre-replacement character count: 261. X URL counting may differ.
+Confirmed SFAB quote length: 259 characters before X weighted-URL counting. X URL counting may differ.
 Both steps are required: (1) quote-tweet tagging all 3 accounts in quote text; (2) official submission form from organizers.
 The team's launch-post and form links are not known until released; do not invent them.
 Do not claim submission is detected until BOTH steps are complete and receipts saved.

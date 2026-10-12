@@ -1,6 +1,6 @@
 # NeatRescue — Don't ship a fix that breaks someone else
 
-**neatHack 2026 · solo entry · [Watch the 90-second demo](https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4) · [Interactive preview](https://neatrescue-demo-2026.onrender.com/) · [Dated build log](hackathon.md)**
+**neatHack 2026 · team SFAB (solo entry) · [Watch the 90-second demo](https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4) · [Interactive preview](https://neatrescue-demo-2026.onrender.com/) · [Dated build log](hackathon.md)**
 
 An AI-agent repair proposal can make one failing example green while quietly rejecting legitimate customer operations. **NeatRescue investigates the failure, challenges plausible partial repairs, and prevents an unverified patch from being accepted.**
 

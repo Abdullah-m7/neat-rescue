@@ -4,7 +4,7 @@
 
 **NeatRescue** — a bounded AI-agent incident investigator that tests repair proposals against counterexamples, persistent-ledger replays, and an independent acceptance gate. Its design question: **"Did the fix solve the visible problem by breaking legitimate behavior?"**
 
-- **Entry:** Solo; handle **[Abdullah-m7](https://github.com/Abdullah-m7)**. The exact Luma registered team name remains to be checked.
+- **Entry:** Solo; handle **[Abdullah-m7](https://github.com/Abdullah-m7)**. Registered team name **SFAB**, confirmed by the participant in Luma on Oct 12.
 - **Public code:** https://github.com/Abdullah-m7/neat-rescue
 - **Public demo:** https://neatrescue-demo-2026.onrender.com/
 - **Narrated 90-second recorded demonstration:** https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4
@@ -82,4 +82,4 @@ Official rules: https://neatlogs.com/hackathon ; build skill: https://neatlogs.c
 
 ## Oct 12 official organizer submission email (newer than generic rules)
 
-Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced official @neatlogs launch X post with three accounts tagged in the quote — @neatlogs, @EntireHQ, @arithecfo — and (2) fill the distinct official submission form whose link is released at the same time. Submitting a form alone or omitting a required tag means the automated submission detector will NOT detect the entry. Live schedule: 7–11:55 PM IST, or 4:30–9:25 PM Saudi. Exact registered team name and form receipt remain pending. See docs/NEATHACK_FORM_READY.md and docs/X_SUBMISSION_DRAFT.txt.
+Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced official @neatlogs launch X post with three accounts tagged in the quote — @neatlogs, @EntireHQ, @arithecfo — and (2) fill the distinct official submission form whose link is released at the same time. Submitting a form alone or omitting a required tag means the automated submission detector will NOT detect the entry. Live schedule: 7–11:55 PM IST, or 4:30–9:25 PM Saudi. Registered team SFAB has been added. Official form submission receipt remains pending. See docs/NEATHACK_FORM_READY.md and docs/X_SUBMISSION_DRAFT.txt.

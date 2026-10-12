@@ -1,10 +1,10 @@
 # neatHack 2026 — submission form copy (NOT submitted)
 
-**Required from registrant:** registered team name (not confirmed in repo), participant name exactly as registered, and form URL announced by organizers Oct 12 at 7:00 PM IST (4:30 PM Saudi).
+**Required from registrant:** registered team name SFAB (user confirmed from Luma), participant name exactly as registered, and form URL announced by organizers Oct 12 at 7:00 PM IST (4:30 PM Saudi).
 
 **Project name:** NeatRescue
 
-**Team name:** [EXACT REGISTERED TEAM NAME]
+**Team name:** SFAB
 
 **Builder:** Abdullah (GitHub @Abdullah-m7); use the complete registration name on the form.
 
@@ -29,7 +29,7 @@ NeatRescue is an AI-agent investigation and independent release-gate prototype. 
 **Final submission checklist:**
 
 - [ ] Capture link to OFFICIAL @neatlogs X launch post, released at opening.
-- [ ] Replace exact team name in docs/X_SUBMISSION_DRAFT.txt and check length.
+- [x] Use the registered team name SFAB in docs/X_SUBMISSION_DRAFT.txt and check length.
 - [ ] Quote-tweet with @neatlogs, @EntireHQ, @arithecfo all IN THE QUOTE.
 - [ ] Save published quote-tweet permalink.
 - [ ] Open OFFICIAL organizer form, fill the description and paste BOTH public links plus quote permalink if asked.
