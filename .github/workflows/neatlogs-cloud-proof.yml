@@ -1,0 +1,82 @@
+name: NeatRescue Neatlogs Cloud Proof
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cloud-proof:
+    name: Verify controlled probe and real synthetic replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      NEATLOGS_ENDPOINT: https://ingest.neatlogs.com
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Checkout only the public submission snapshot
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install verified Neatlogs SDK and app dependencies
+        run: python -m pip install 'neatlogs==1.4.26' ollama
+      - name: Check configured project secret without printing it
+        env:
+          NEATLOGS_API_KEY: ${{ secrets.NEATLOGS_API_KEY }}
+        shell: bash
+        run: |
+          mkdir -p proof
+          if [[ -z "${NEATLOGS_API_KEY:-}" ]]; then
+            echo "::error::Missing NEATLOGS_API_KEY repository Actions secret. Add the scoped project key in Settings > Secrets and variables > Actions."
+            exit 3
+          fi
+          echo "Project key present as secret; value withheld."
+      - name: Verify NeatRescue's local unit suite
+        run: python -m unittest discover -s tests -v
+      - name: Doctor local pipeline
+        run: |
+          python -m neatlogs doctor --local --json > proof/doctor_local.json
+          python - <<'PY'
+          import json
+          x=json.load(open("proof/doctor_local.json"))
+          assert (x["format_version"],x["mode"],x["status"],x["runtime"]["language"],str(x["runtime"]["schema_version"]))==(
+            "neatlogs.doctor/v2","local","pass","python","2"
+          ), "SDK local Doctor v2 failed"
+          print("DOCTOR_LOCAL_PASS sdk="+str(x["runtime"]["sdk_version"]))
+          PY
+      - name: Prove exact hosted readback with project key
+        env:
+          NEATLOGS_API_KEY: ${{ secrets.NEATLOGS_API_KEY }}
+        run: |
+          python -m neatlogs doctor --probe --json > proof/doctor_probe.json
+          python - <<'PY'
+          import json
+          x=json.load(open("proof/doctor_probe.json"))
+          assert x["format_version"]=="neatlogs.doctor/v2"
+          assert x["mode"]=="probe" and x["status"]=="pass", "Cloud readback Doctor failed"
+          assert x.get("probe",{}).get("visible") is True, "Exact finalized trace not visible"
+          print("DOCTOR_CLOUD_READBACK_PASS",x.get("capture",{}).get("trace_id"))
+          PY
+      - name: Replay authentic synthetic SQLite verification through SDK
+        env:
+          NEATLOGS_API_KEY: ${{ secrets.NEATLOGS_API_KEY }}
+        run: |
+          python -m neatrescue.trace_replay --live > proof/app_replay.json
+          python - <<'PY'
+          import json
+          x=json.load(open("proof/app_replay.json"))
+          assert x["status"]=="pass" and x["cloud_verified"] is True
+          assert [(i["payment_rows"],i["passed"]) for i in x["cases"]]==[(4,False),(1,False),(3,True)]
+          print("APP_TRACE_CLOUD_READBACK_PASS",x["trace_id"],"spans",x["readback"]["readback_span_count"])
+          PY
+      - name: Save sanitized evidence (no credentials)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: neatrescue-sfab-neatlogs-proof
+          path: proof/
+          retention-days: 7
+          if-no-files-found: warn
