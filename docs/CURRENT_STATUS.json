@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-12T00:27:06.629409+00:00",
+  "base_repo": "/Users/3obd/Developer/neatrescue-hackathon-submission",
+  "snapshot_commit": "f58e7a12533ce44405329b081135be4e919a524e",
+  "source_unchanged": true,
+  "publication_status": "PRIVATE_LOCAL_STAGING",
+  "video_backup": "media/NeatRescue_Demo_BACKUP_140s.mp4",
+  "video_sha256": "be5a35f66df835a93b14a5d15ba02e2a95c06bcc8763762fd0d10069d44c3d86",
+  "mandatory_missing": [
+    "Neatlogs verified cloud trace",
+    "cfo.ai actual export",
+    "public repo link",
+    "official X quote submission",
+    "team check-in confirmation"
+  ]
+}

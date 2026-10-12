@@ -1,0 +1,16 @@
+NeatRescue | #neatHack
+
+A repair can pass the reported incident and still break legitimate customers.
+
+Our agent investigates a committed refund whose confirmation was lost, rejects an incomplete fix, and independently verifies a frozen source patch.
+
+Broken: 4 payments. Plausible wrong fix: 1. Verified: 3.
+
+Team: [REGISTERED TEAM NAME]
+Builder: [YOUR NAME]
+Code: [PUBLIC GITHUB URL]
+Demo (140s): [PUBLIC VIDEO URL]
+
+Uses Entire source context; Neatlogs runtime tracing and cfo.ai plan evidence must be added once verified. This is a synthetic sandbox, not a real payment system.
+
+[QUOTE THE OFFICIAL NEATLOGS SUBMISSION POST; do not post as an unlinked standalone tweet]
