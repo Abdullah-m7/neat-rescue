@@ -1,16 +1,16 @@
-NeatRescue | #neatHack
+OFFICIAL neatHack SUBMISSION DRAFT (POST ONLY AS QUOTE OF OFFICIAL NEATLOGS POST AFTER 4:30 PM KSA, OCT 12)
 
-A repair can pass the reported incident and still break legitimate customers.
+Team: [LUMA TEAM] | Abdullah
+NeatRescue: A fix may stop duplicate refunds but silently block valid ones. Our agent catches both: 4 → 1 → 3 payments.
+Repo: https://github.com/Abdullah-m7/neat-rescue
+Demo: https://neatrescue-demo-2026.onrender.com
+#neatHack
 
-Our agent investigates a committed refund whose confirmation was lost, rejects an incomplete fix, and independently verifies a frozen source patch.
+CHARACTER CHECK: 255 characters with the short team-name placeholder. If the registered team name is longer, recheck the 280-character limit in X.
 
-Broken: 4 payments. Plausible wrong fix: 1. Verified: 3.
-
-Team: [REGISTERED TEAM NAME]
-Builder: [YOUR NAME]
-Code: https://github.com/Abdullah-m7/neat-rescue
-Demo (140s): https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4
-
-Entire context was used. Local Neatlogs tracing test passed; authenticated cloud trace and a cfo.ai-generated business plan must be attached before final submission. This is a synthetic sandbox, not a real payment system.
-
-[QUOTE THE OFFICIAL NEATLOGS SUBMISSION POST; do not post as an unlinked standalone tweet]
+REQUIRED BEFORE PUBLICATION:
+- Use the registered team name exactly as recorded in Luma/web check-in.
+- Quote the official neatlogs submission post from https://neatlogs.com/hackathon (do not make a standalone post).
+- Verify check-in; attach evidence of an authenticated Neatlogs trace and the actual cfo.ai generated plan, and include these in repo/demo before submitting.
+- Opening the draft is not submitting. Confirm published X post URL and final Discord cutoff.
+- This quote is user-approval gated; it has not been posted by ChatGPT.
