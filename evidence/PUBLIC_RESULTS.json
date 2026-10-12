@@ -1,0 +1,101 @@
+{
+  "source": "Recorded synthetic sandbox, 2026-10-10",
+  "original_run_id": "20261010T125013Z-7ad05b83",
+  "final_plan_sha256": "f75a76bdec56f24dbcfaaf04f48016261fef5439b80ebf602770a83209483903",
+  "final_outcome_sha256": "4eab468ce1779c1c109a65fc88627b238b596d2007fb80cdfbc2914a6c9f282f",
+  "final_execution_attempts": 1,
+  "readbacks_without_rerun": 2,
+  "model_wrote_patch": true,
+  "tests": {
+    "unit": 115,
+    "all_passed": true,
+    "adapter_fresh": 128
+  },
+  "ledger": {
+    "faulty": {
+      "rows": 4,
+      "expected_logical_ops": 3,
+      "pass": false,
+      "retry_only_passed": false,
+      "invariants": {
+        "no_duplicate_payment_after_retry": false,
+        "legitimate_sibling_paid": true,
+        "other_tenant_paid": true,
+        "amounts_correct": false,
+        "inventory_correct": false,
+        "commit_survived_connection_restart": true,
+        "no_missed_operations": true,
+        "no_unexpected_operations": true
+      }
+    },
+    "incomplete_order_only": {
+      "rows": 1,
+      "expected_logical_ops": 3,
+      "pass": false,
+      "retry_only_passed": true,
+      "invariants": {
+        "no_duplicate_payment_after_retry": true,
+        "legitimate_sibling_paid": false,
+        "other_tenant_paid": false,
+        "amounts_correct": false,
+        "inventory_correct": false,
+        "commit_survived_connection_restart": true,
+        "no_missed_operations": false,
+        "no_unexpected_operations": true
+      }
+    },
+    "accepted": {
+      "rows": 3,
+      "expected_logical_ops": 3,
+      "pass": true,
+      "retry_only_passed": true,
+      "invariants": {
+        "no_duplicate_payment_after_retry": true,
+        "legitimate_sibling_paid": true,
+        "other_tenant_paid": true,
+        "amounts_correct": true,
+        "inventory_correct": true,
+        "commit_survived_connection_restart": true,
+        "no_missed_operations": true,
+        "no_unexpected_operations": true
+      }
+    },
+    "direct": {
+      "rows": 3,
+      "expected_logical_ops": 3,
+      "pass": true,
+      "retry_only_passed": true,
+      "invariants": {
+        "no_duplicate_payment_after_retry": true,
+        "legitimate_sibling_paid": true,
+        "other_tenant_paid": true,
+        "amounts_correct": true,
+        "inventory_correct": true,
+        "commit_survived_connection_restart": true,
+        "no_missed_operations": true,
+        "no_unexpected_operations": true
+      }
+    }
+  },
+  "comparison": {
+    "same_primary_model": "claude-opus-5",
+    "direct_seconds": 29.744,
+    "investigator_seconds": 131.222,
+    "investigator_tool_decisions": 8,
+    "investigator_source_patches": 1,
+    "direct_passes": 128,
+    "investigator_passes": 128,
+    "adapter_case_count": 128,
+    "both_pass_ledger": true,
+    "same_case_hash": true,
+    "same_ledger_hash": true,
+    "reasoning_superiority_claimed": false,
+    "fairness_limit": "Same task/model, but different diagnostic access and resource budgets. Descriptive one-case comparison; not an efficiency or reliability claim."
+  },
+  "limits": [
+    "One controller-authored synthetic incident, not a reliability estimate.",
+    "Restricted Python-subset adapters, not arbitrary repository repair.",
+    "SQLite connection restart is distinct from the separate process-exit test of the final gate.",
+    "Trusted local filesystem: hashes bind evidence but are not external signed attestation."
+  ]
+}

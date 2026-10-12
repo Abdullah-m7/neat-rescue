@@ -1,0 +1,338 @@
+{
+  "protocol": "ledger-replay/v1",
+  "passed": false,
+  "retry_only_passed": true,
+  "invariants": {
+    "no_duplicate_payment_after_retry": true,
+    "legitimate_sibling_paid": false,
+    "other_tenant_paid": false,
+    "amounts_correct": false,
+    "inventory_correct": false,
+    "commit_survived_connection_restart": true,
+    "no_missed_operations": false,
+    "no_unexpected_operations": true
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "DB_CREATED",
+      "data": {
+        "connection_generation": 1,
+        "orders": 2,
+        "journal_mode": "delete",
+        "idempotency_key": "payments.operation_key UNIQUE"
+      }
+    },
+    {
+      "seq": 2,
+      "kind": "COMMIT",
+      "data": {
+        "role": "base",
+        "phase": "first_connection",
+        "operation_key": "ordcz55gn",
+        "attempt_id": "djp1edq",
+        "logical_id": "tmttjb|rf26u13x",
+        "requested_cents": 13200,
+        "qty": 2,
+        "stock_before": 6,
+        "stock_after": 4,
+        "amount_cents": 13200,
+        "paid": true,
+        "outcome": "PAID",
+        "key_already_settled": false,
+        "connection_generation": 1
+      }
+    },
+    {
+      "seq": 3,
+      "kind": "ACK_LOST",
+      "data": {
+        "role": "base",
+        "operation_key": "ordcz55gn",
+        "committed_before_loss": true,
+        "amount_cents": 13200,
+        "note": "acknowledgement dropped after the SQLite commit; rows stay durable"
+      }
+    },
+    {
+      "seq": 4,
+      "kind": "CONNECTION_CLOSED",
+      "data": {
+        "connection_generation": 1
+      }
+    },
+    {
+      "seq": 5,
+      "kind": "REOPEN",
+      "data": {
+        "connection_generation": 2,
+        "mechanism": "connection restart",
+        "rows_read_back": [
+          {
+            "operation_key": "ordcz55gn",
+            "attempt_id": "djp1edq",
+            "amount_cents": 13200
+          }
+        ],
+        "stock_read_back": {
+          "t8i5dl|ordcz55gn": 4,
+          "tmttjb|ordcz55gn": 4
+        },
+        "retry_attempt_id": "l26fnsrm"
+      }
+    },
+    {
+      "seq": 6,
+      "kind": "REPLAY",
+      "data": {
+        "role": "retry",
+        "phase": "after_restart",
+        "operation_key": "ordcz55gn",
+        "attempt_id": "l26fnsrm",
+        "logical_id": "tmttjb|rf26u13x",
+        "requested_cents": 13200,
+        "qty": 2,
+        "stock_before": 4,
+        "stock_after": 4,
+        "amount_cents": 0,
+        "paid": false,
+        "outcome": "REPLAY_SKIPPED_AS_SETTLED",
+        "key_already_settled": true,
+        "connection_generation": 2
+      }
+    },
+    {
+      "seq": 7,
+      "kind": "BLOCKED",
+      "data": {
+        "role": "sibling",
+        "phase": "after_restart",
+        "operation_key": "ordcz55gn",
+        "attempt_id": "1oiq70y",
+        "logical_id": "tmttjb|rfyeeywo",
+        "requested_cents": 5000,
+        "qty": 1,
+        "stock_before": 4,
+        "stock_after": 4,
+        "amount_cents": 0,
+        "paid": false,
+        "outcome": "REPLAY_SKIPPED_AS_SETTLED",
+        "key_already_settled": true,
+        "connection_generation": 2
+      }
+    },
+    {
+      "seq": 8,
+      "kind": "BLOCKED",
+      "data": {
+        "role": "other_tenant",
+        "phase": "after_restart",
+        "operation_key": "ordcz55gn",
+        "attempt_id": "fq0pynw",
+        "logical_id": "t8i5dl|rf26u13x",
+        "requested_cents": 8200,
+        "qty": 1,
+        "stock_before": 4,
+        "stock_after": 4,
+        "amount_cents": 0,
+        "paid": false,
+        "outcome": "REPLAY_SKIPPED_AS_SETTLED",
+        "key_already_settled": true,
+        "connection_generation": 2
+      }
+    },
+    {
+      "seq": 9,
+      "kind": "FINAL_ROWS",
+      "data": {
+        "payments": [
+          {
+            "seq": 1,
+            "operation_key": "ordcz55gn",
+            "tenant_id": "tmttjb",
+            "refund_id": "rf26u13x",
+            "order_id": "ordcz55gn",
+            "attempt_id": "djp1edq",
+            "amount_cents": 13200
+          }
+        ],
+        "inventory": {
+          "t8i5dl|ordcz55gn": 4,
+          "tmttjb|ordcz55gn": 4
+        }
+      }
+    }
+  ],
+  "expected": {
+    "logical_operations": {
+      "tmttjb|rf26u13x": {
+        "payments": 1,
+        "amount_cents": 13200,
+        "roles": [
+          "base",
+          "retry"
+        ]
+      },
+      "tmttjb|rfyeeywo": {
+        "payments": 1,
+        "amount_cents": 5000,
+        "roles": [
+          "sibling"
+        ]
+      },
+      "t8i5dl|rf26u13x": {
+        "payments": 1,
+        "amount_cents": 8200,
+        "roles": [
+          "other_tenant"
+        ]
+      }
+    },
+    "inventory": {
+      "tmttjb|ordcz55gn": 3,
+      "t8i5dl|ordcz55gn": 3
+    },
+    "rule": "each distinct tenant|refund settles exactly once at min(request, remaining paid balance) and lowers stock once; a retry of a settled operation pays nothing"
+  },
+  "observed": {
+    "logical_operations": {
+      "tmttjb|rf26u13x": {
+        "payments": 1,
+        "amount_cents": 13200,
+        "operation_keys": [
+          "ordcz55gn"
+        ],
+        "attempt_ids": [
+          "djp1edq"
+        ]
+      }
+    },
+    "inventory": {
+      "t8i5dl|ordcz55gn": 4,
+      "tmttjb|ordcz55gn": 4
+    },
+    "payment_rows": [
+      {
+        "seq": 1,
+        "operation_key": "ordcz55gn",
+        "tenant_id": "tmttjb",
+        "refund_id": "rf26u13x",
+        "order_id": "ordcz55gn",
+        "attempt_id": "djp1edq",
+        "amount_cents": 13200
+      }
+    ]
+  },
+  "differences": {
+    "missed_operations": [
+      "t8i5dl|rf26u13x",
+      "tmttjb|rfyeeywo"
+    ],
+    "duplicate_operations": [],
+    "incorrect_amounts": [
+      {
+        "logical_id": "tmttjb|rfyeeywo",
+        "expected_cents": 5000,
+        "observed_cents": 0
+      },
+      {
+        "logical_id": "t8i5dl|rf26u13x",
+        "expected_cents": 8200,
+        "observed_cents": 0
+      }
+    ],
+    "inventory_mismatches": [
+      {
+        "order": "tmttjb|ordcz55gn",
+        "expected_stock": 3,
+        "observed_stock": 4
+      },
+      {
+        "order": "t8i5dl|ordcz55gn",
+        "expected_stock": 3,
+        "observed_stock": 4
+      }
+    ],
+    "unexpected_operations": []
+  },
+  "errors": [],
+  "restart": {
+    "rows_after_reopen": 1,
+    "committed_row_visible_after_reopen": true
+  },
+  "scenario": {
+    "policy": {
+      "window_days": 30
+    },
+    "orders": [
+      {
+        "tenant_id": "tmttjb",
+        "order_id": "ordcz55gn",
+        "paid_cents": 116000,
+        "refunded_cents": 0,
+        "age_days": 1,
+        "cached_window_days": 27,
+        "stock": 6
+      },
+      {
+        "tenant_id": "t8i5dl",
+        "order_id": "ordcz55gn",
+        "paid_cents": 107000,
+        "refunded_cents": 0,
+        "age_days": 0,
+        "cached_window_days": 28,
+        "stock": 4
+      }
+    ],
+    "operations": [
+      {
+        "role": "base",
+        "phase": "first_connection",
+        "tenant_id": "tmttjb",
+        "refund_id": "rf26u13x",
+        "order_id": "ordcz55gn",
+        "attempt_id": "djp1edq",
+        "requested_cents": 13200,
+        "qty": 2
+      },
+      {
+        "role": "retry",
+        "phase": "after_restart",
+        "tenant_id": "tmttjb",
+        "refund_id": "rf26u13x",
+        "order_id": "ordcz55gn",
+        "attempt_id": "l26fnsrm",
+        "requested_cents": 13200,
+        "qty": 2
+      },
+      {
+        "role": "sibling",
+        "phase": "after_restart",
+        "tenant_id": "tmttjb",
+        "refund_id": "rfyeeywo",
+        "order_id": "ordcz55gn",
+        "attempt_id": "1oiq70y",
+        "requested_cents": 5000,
+        "qty": 1
+      },
+      {
+        "role": "other_tenant",
+        "phase": "after_restart",
+        "tenant_id": "t8i5dl",
+        "refund_id": "rf26u13x",
+        "order_id": "ordcz55gn",
+        "attempt_id": "fq0pynw",
+        "requested_cents": 8200,
+        "qty": 1
+      }
+    ]
+  },
+  "seed": 1880990520,
+  "source_sha256": "893877d676c1eebf9671658fe3830f1dfc7d62b0e641ac1f62605555f2c6a194",
+  "scenario_sha256": "eb5a52e7edc00bfd75c93633f0051f5ced4b4b2150be9934745b738883b114cb",
+  "database_path": "sqlite/incomplete_order_only.sqlite3",
+  "database_temporary": false,
+  "synthetic": true,
+  "no_production_changes": true,
+  "claims": "one synthetic scenario; no empirical reliability or production safety claim"
+}
