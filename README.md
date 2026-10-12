@@ -80,11 +80,11 @@ The real agent run requires Entire's `entire-graph` executable at `.tools/entire
 
 | Required tool | Implemented role | Submission evidence |
 |---|---|---|
-| **neatlogs** | Python SDK agent/workflow/tool tracing | **Doctor v2 local PASS**, plus [real synthetic SQLite 4→1→3 replay with traced tool calls](evidence/NEATLOGS_REAL_SYNTHETIC_REPLAY_LOCAL_20261012.json); [cloud proof setup](docs/NEATLOGS_CLOUD_PROOF_SETUP.md) ready. **Authenticated cloud readback still pending project key** |
+| **neatlogs** | Python SDK agent/workflow/tool tracing | **Verified authenticated Neatlogs cloud traces**: [strict Doctor + actual SQLite replay](evidence/neatlogs_cloud_20261012/README.md); [successful CI run](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070) confirms exact trace ID, finalized 4-span workflow and three named tool calls (4→1→3 source checks). No new LLM call was made during this proof. |
 | **Entire** | Coding checkpoints and actual source-graph context | Recorded checkpoint and graph output; context consumed in agent run |
 | **cfo.ai** | Pricing, costs, revenue and runway planning | **Original files supplied by SFAB on Oct 12:** [12-page business plan PDF](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Business_Plan.pdf) and [financial-model XLSX](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Financial_Model.xlsx). [Key findings](docs/cfo_ai/KEY_FINDINGS.md) and [provenance](docs/cfo_ai/CFO_AI_PROVENANCE.md). Figures are **hypothetical**. |
 
-The hackathon requires all three sponsor tools. The cfo.ai PDF and Excel exports are now archived; the participant reports their source as cfo.ai, while independent dashboard verification was not performed. **Authenticated Neatlogs cloud traces and the final two-step X/form submission remain unverified.**
+The hackathon requires all three sponsor tools. The cfo.ai PDF and Excel exports are now archived; the participant reports their source as cfo.ai, while independent dashboard verification was not performed. **Authenticated Neatlogs cloud tracing now VERIFIED. Official X quote and organizer form remain NOT submitted.**
 
 ## Reproducibility and boundaries
 
@@ -94,4 +94,4 @@ The prototype covers four pure Python adapter functions and a small synthetic bu
 
 The cinematic hero image is **Adobe Firefly-generated illustration**, not footage of an actual customer.
 
-**Submission state (Oct 12):** Public GitHub repository and Render demo are live and externally accessible. Entire evidence and Neatlogs local SDK test are documented. Authenticated Neatlogs cloud traces, participant check-in and the official X quote + submission form remain unverified. SFAB-supplied cfo.ai PDF/XLSX exports are now public, but dashboard provenance has not been independently checked. **This has not yet been formally submitted.** Official rules: https://neatlogs.com/hackathon.
+**Submission state (Oct 12):** Public GitHub repository and Render demo are live and externally accessible. Entire evidence and Neatlogs local SDK test are documented. Neatlogs cloud Doctor and application trace verified by three successful CI runs; participant check-in and the official X quote + submission form remain unverified. SFAB-supplied cfo.ai PDF/XLSX exports are now public, but dashboard provenance has not been independently checked. **This has not yet been formally submitted.** Official rules: https://neatlogs.com/hackathon.

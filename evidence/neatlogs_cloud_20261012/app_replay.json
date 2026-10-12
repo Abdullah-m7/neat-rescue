@@ -1,9 +1,9 @@
 {
   "format_version": "neatrescue/neatlogs-live-replay/v1",
-  "checked_at_utc": "2026-10-12T12:21:06.115348+00:00",
+  "checked_at_utc": "2026-10-12T12:29:19.161423+00:00",
   "mode": "cloud",
   "trace_name": "neatrescue.synthetic-refund-acceptance-gate",
-  "trace_id": "e114fb65c336971cb35100d08b44b0ac",
+  "trace_id": "fe957baa16c73e165252a60d1d379042",
   "local_trace_id_valid": true,
   "synthetic": true,
   "source": "Actual 3-candidate bounded SQLite replay, NOT a fresh LLM run",
@@ -56,7 +56,19 @@
     "status": "pass",
     "trace_id_matches": true,
     "readback_span_count": 4,
-    "trace_names": []
+    "trace_names": [
+      "sqlite-replay-incomplete",
+      "sqlite-replay-verified",
+      "sqlite-replay-faulty",
+      "neatrescue.synthetic-refund-acceptance-gate"
+    ],
+    "trace_types": [
+      "tool_call",
+      "tool_call",
+      "tool_call",
+      "workflow"
+    ],
+    "materialized_status": "success"
   },
   "status": "pass"
 }

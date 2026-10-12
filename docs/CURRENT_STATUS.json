@@ -7,7 +7,6 @@
   "video_backup": "media/NeatRescue_Demo_BACKUP_140s.mp4",
   "video_sha256": "be5a35f66df835a93b14a5d15ba02e2a95c06bcc8763762fd0d10069d44c3d86",
   "mandatory_missing": [
-    "Neatlogs authenticated cloud trace",
     "participant check-in confirmation",
     "official X quote submission"
   ],
@@ -28,5 +27,20 @@
     "image": 200,
     "json": 200
   },
-  "public_build_log": "hackathon.md"
+  "public_build_log": "hackathon.md",
+  "neatlogs_cloud_verified": true,
+  "neatlogs_cloud_latest_success": {
+    "run_url": "https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070",
+    "app_trace_id": "fe957baa16c73e165252a60d1d379042",
+    "doctor_trace_id": "421e0c940da3164c4cf2213bc32877a5",
+    "readback_span_count": 4,
+    "span_types": [
+      "workflow",
+      "tool_call",
+      "tool_call",
+      "tool_call"
+    ],
+    "materialized_status": "success",
+    "claim_boundary": "A real instrumented synthetic SQLite replay, not new LLM inference or real payments"
+  }
 }

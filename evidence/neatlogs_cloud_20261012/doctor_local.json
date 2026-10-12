@@ -1,9 +1,9 @@
 {
   "capture": {
-    "root_span_id": "1441293967eea72e",
+    "root_span_id": "c8da3b1d7a1cdaf1",
     "semantic_digest": "sha256:7163d2de42c4165f3ae552279fdde2ec0839413ce608c6e5d71f3fb532df319b",
     "span_count": 4,
-    "trace_id": "ca0399bbb4508b26816e44f14c082171"
+    "trace_id": "3d8bdbc018339e6d4fbbb7e8740b2c0f"
   },
   "checks": [
     {

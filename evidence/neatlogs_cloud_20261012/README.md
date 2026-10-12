@@ -1,28 +1,41 @@
-# Authenticated Neatlogs cloud proof — 12 October 2026
+# Authenticated Neatlogs cloud proof — Team SFAB
 
-**Project:** NeatRescue · Team SFAB · neatHack 2026.
+**Date:** October 12, 2026  
+**Project:** NeatRescue / neatHack 2026  
+**Verification:** Cloud delivery and readback fully confirmed, **without revealing the project key**.
 
-**Public, successfully completed CI run:**
-https://github.com/Abdullah-m7/neat-rescue/actions/runs/38248440577
+## Independently reproducible GitHub Actions runs
 
-The `NEATLOGS_API_KEY` was supplied via an **encrypted GitHub Actions repository secret** and was never included in source code or the uploaded evidence. The key value is not reproduced here.
+- [First successful cloud probe and application replay](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38248440577)
+- [Second successful replay with actual materialized span names/types](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249053526)
+- [Strict schema and semantic verification — PASS](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070)
 
-## Exact results
+The final strict run used source SHA `57ea8508464c8067c6c2523d61392922ce14b12b`. It confirmed the exact persisted trace via an authenticated read from the Neatlogs ingest service, rather than simply a successful local flush.
 
-- **SDK:** Neatlogs Python `1.4.26`, controlled Doctor v2 local capture **PASS**, 4 synthetic spans.
-- **Cloud controlled probe:** Doctor v2 `--probe` **PASS**, `probe.visible=true`, `probe.finalized=true`, `probe.readback_span_count=4`, proper hierarchy and attributes. Trace ID: `b76016d3465634304f7ccb39493140c5`.
-- **Actual NeatRescue replay:** Three bounded real SQLite commit/reopen/retry verifications, wrapped in a Neatlogs workflow/tool instrumentation. Server returned **exact same trace ID** `e114fb65c336971cb35100d08b44b0ac` with **4 materialized spans**; `app_replay.json` reports `cloud_verified=true`.
-- **Independent code tests:** `117/117` unit tests passed in that CI job.
-- **Replay outcomes:** original faulty source created **4** payment rows (FAIL), deceptive partial fix created **1** (FAIL), accepted patch created **3** (PASS with 8/8 SQLite invariants).
+## Final strict run (verified)
 
-These are synthetic business fixtures, **not real customer payments**. The trace replay re-evaluates already captured model-authored source. **No fresh LLM call was made during this cloud-proof run**, and it does not assert production-grade agent safety. All financial cfo.ai figures are likewise hypothetical.
+- **Neatlogs SDK 1.4.26, Python 3.11.**
+- **Doctor v2 local:** PASS, 4 captured synthetic spans.
+- **Doctor hosted probe:** PASS; `visible=true`, `finalized=true`, 4 materialized spans, hierarchy and attributes valid; exact trace `421e0c940da3164c4cf2213bc32877a5`.
+- **NeatRescue application trace:** PASS; exact persisted trace `fe957baa16c73e165252a60d1d379042`, status `success`, 4 unique named spans with the expected types:
+  - `neatrescue.synthetic-refund-acceptance-gate` — `workflow`
+  - `sqlite-replay-faulty` — `tool_call`
+  - `sqlite-replay-incomplete` — `tool_call`
+  - `sqlite-replay-verified` — `tool_call`
+- **Application results:** the actual SQLite restart and retry produced **4** payments (faulty, FAIL), **1** payment (plausible incomplete fix, FAIL) and **3** payments (independently accepted patch, PASS, all 8 ledger invariants).
+- **Test suite:** 117/117 PASS in this GitHub Actions run.
 
-## Saved evidence
+## Audit files
 
-- [doctor_local.json](doctor_local.json) — local SDK capture diagnostics.
-- [doctor_probe.json](doctor_probe.json) — authenticated, materialized Doctor trace and detailed validation flags.
-- [app_replay.json](app_replay.json) — actual bounded NeatRescue application replay, unique trace ID, payment rows and cloud-readback status.
+- [doctor_local.json](doctor_local.json) — controlled SDK capture.
+- [doctor_probe.json](doctor_probe.json) — exact authenticated, finalized cloud readback with detailed diagnostic checks.
+- [app_replay.json](app_replay.json) — real bounded NeatRescue replay, signed source hashes, exact cloud trace ID, all source outcomes and persisted node names/types.
+- [Instrumented application source](../../neatrescue/trace_replay.py) — no new model call; one controlled workflow + 3 real tool spans.
 
-The source files are left unchanged except for an independently reviewed tracer wrapper. The original CI artifact `neatrescue-sfab-neatlogs-proof` is downloadable from the successful GitHub Actions run (GitHub retains it for 7 days). This folder makes the evidence durable inside the public repository.
+The above files were copied from the **final strict run's GitHub Actions artifact** and checked for accidental secret strings before public publication. The API key was inserted by the owner into `NEATLOGS_API_KEY`, an encrypted repository Actions secret. **The secret value was not read, printed, copied into files, or published.**
 
-**Provenance note:** readback requires the project's API key. Public visitors can audit the CI logs and checks but cannot query private trace details without project credentials. Never publish the key or an authenticated dashboard session.
+## Claim boundary
+
+This proves that an **instrumented synthetic verification workflow** really persisted and was read back from the authenticated Neatlogs cloud API. It does **not** establish that the original model-run traces (which were produced before key configuration) were uploaded retroactively. The proof replay used pre-existing source patches rather than a fresh LLM call, and made no real payment or deployment. NeatRescue's separate model-driven original run is documented in the technical evidence elsewhere.
+
+To inspect the underlying private trace directly in a dashboard, a judge would need appropriate project access. The publicly visible Actions logs and sanitized readback JSON establish the authenticated success without disclosing project credentials.

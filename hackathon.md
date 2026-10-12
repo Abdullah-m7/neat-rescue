@@ -14,7 +14,7 @@
 
 - Python 3.11; bounded AST source evaluation; SQLite (transaction commit/reopen/retry); Python unit tests; Claude CLI model-driven tool selection.
 - **Entire**: agent coding checkpoints and source graph context used in the investigated source trace. Curated evidence in `evidence/ENTIRE_CHECKPOINT.json`.
-- **Neatlogs SDK**: local instrumentation of agent, LLM and tool calls. Local Doctor v2 returned PASS on Oct 12 with 4 captured spans. **Cloud delivery to authenticated project is NOT verified.** See `evidence/NEATLOGS_LOCAL_DOCTOR_20261012.json`.
+- **Neatlogs SDK**: local instrumentation of agent, LLM and tool calls. Local Doctor v2 returned PASS on Oct 12 with 4 captured spans. **Authenticated cloud delivery and exact 4-span readback confirmed Oct 12**. See `evidence/neatlogs_cloud_20261012/README.md` and GitHub Actions run 38249294070. The verification is an instrumented synthetic replay, NOT a new LLM inference call.
 - **cfo.ai**: SFAB participant provided two financial-model exports on Oct 12, now [published unchanged with checksum provenance](docs/cfo_ai/CFO_AI_PROVENANCE.md): a [12-page PDF](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Business_Plan.pdf) and a [12-sheet XLSX](docs/cfo_ai/NeatRescue_Team_SFAB_neatHack_2026_Financial_Model.xlsx). The report covers pricing, costs, hypothetical revenue and runway. [Summary](docs/cfo_ai/KEY_FINDINGS.md). Independent cfo.ai dashboard access was not verified.
 - Recorded demo rendered with English Kokoro voice-over; cinematic opening image in webpage is a labeled synthetic Adobe Firefly illustration. No real customers or real money.
 
@@ -60,7 +60,7 @@ For the source and ledger evidence, inspect `evidence/PUBLIC_RESULTS.json` and t
 ## Important limits
 
 - **One synthetic four-function incident** with bounded verification; not an estimate of reliability in production or general repository repair.
-- No proven autonomous production deployment, no real payments or customers, and no operationally verified cloud Neatlogs trace.
+- No proven autonomous production deployment, no real payments or customers. Neatlogs cloud replay was verified Oct 12; original pre-key LLM investigation spans were not uploaded retroactively.
 - Local source hashes bind records for consistency; not externally signed attestations.
 - The public repository is an intentionally curated snapshot, not a claim that all original private development history has been published.
 - The demo is **recorded evidence visualization with synthetic narration**, not a live tool demo. A future improvement should show authenticated sponsor dashboards only after actual integration.
@@ -68,7 +68,7 @@ For the source and ledger evidence, inspect `evidence/PUBLIC_RESULTS.json` and t
 ## Official submission gate — still pending as of 12 Oct (KSA)
 
 - [ ] Confirm check-in with the email used on Luma: https://neatlogs.com/hackathon/check-in
-- [ ] Record actual Neatlogs authenticated cloud trace URL/screenshot; never commit an API key.
+- [x] **Authenticated cloud trace PASS** from strict GitHub Actions run 38249294070; 4 meaningful materialized spans (workflow + 3 tools), no API key published.
 - [x] Record Entire checkpoint and source context.
 - [x] Received and publicly archived the two participant-supplied cfo.ai financial exports (PDF and XLSX), including prices, costs, hypothetical revenue and runway. Dashboard-origin receipt not independently confirmed.
 - [x] Publish publicly accessible GitHub repo and demo video <=180 seconds.
@@ -90,4 +90,8 @@ Submission is **TWO mandatory steps** at opening: (1) quote-tweet the announced 
 - Added a real application-level instrumentation entry point: `python -m neatrescue.trace_replay --local`, with one `WORKFLOW` and three tool wrappers around SQLite commit/reopen/retry checks.
 - Verified 4 faulty, 1 incomplete and 3 accepted payments; the accepted candidate passed all 8 independent ledger invariants. **No new model call** is made by this deterministic verification run.
 - Published [sanitized replay results](evidence/NEATLOGS_REAL_SYNTHETIC_REPLAY_LOCAL_20261012.json), [source](neatrescue/trace_replay.py) and [project-key setup](docs/NEATLOGS_CLOUD_PROOF_SETUP.md).
-- SDK Doctor local v2 PASS; the controlled hosted probe returned `CREDENTIAL_MISSING` because the project API key is not installed. Thus authenticated Neatlogs cloud delivery is **NOT YET confirmed**.
+- Initial SDK Doctor local v2 PASS, but first hosted probe returned `CREDENTIAL_MISSING`. The owner later saved the project key as a GitHub Actions secret. **Three subsequent CI cloud-probe/application-replay runs succeeded**, culminating in strict semantic readback of one workflow and three named tool spans. See [verified proof](evidence/neatlogs_cloud_20261012/README.md).
+
+## Oct 12 15:20+ KSA — Neatlogs authenticated cloud success
+
+GitHub Actions [strict run 38249294070](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070) passed 117 tests, SDK Doctor v2, a hosted finalized probe, and a separately materialized NeatRescue synthetic SQLite replay. The readback showed exactly 4 correctly typed/named spans (workflow and 3 tool calls), matching its generated trace ID. [Raw sanitized diagnostic outputs](evidence/neatlogs_cloud_20261012/README.md) are public. No API key was published. This confirms only real tool/workflow tracing during the new deterministic replay, not new LLM execution or live payment activity.

@@ -1,9 +1,9 @@
 {
   "capture": {
-    "root_span_id": "1cb92e816d925151",
+    "root_span_id": "442aaefca441d0bd",
     "semantic_digest": "sha256:7163d2de42c4165f3ae552279fdde2ec0839413ce608c6e5d71f3fb532df319b",
     "span_count": 4,
-    "trace_id": "b76016d3465634304f7ccb39493140c5"
+    "trace_id": "421e0c940da3164c4cf2213bc32877a5"
   },
   "checks": [
     {
@@ -71,7 +71,7 @@
   ],
   "first_failure": null,
   "flush": {
-    "duration_ms": 682,
+    "duration_ms": 681,
     "outcome": "success",
     "timeout_ms": 5000
   },
@@ -93,7 +93,7 @@
     "meaningful_root_count": 1,
     "metadata_valid": true,
     "readback_span_count": 4,
-    "readback_trace_id": "b76016d3465634304f7ccb39493140c5",
+    "readback_trace_id": "421e0c940da3164c4cf2213bc32877a5",
     "typed_tokens_valid": true,
     "visible": true
   },
