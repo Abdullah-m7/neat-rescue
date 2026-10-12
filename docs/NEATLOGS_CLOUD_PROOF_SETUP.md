@@ -13,7 +13,9 @@ The key is stored by GitHub as an encrypted Actions secret. It is not placed in 
 
 ## What the release controller will do
 
-The workflow `.github/workflows/neatlogs-cloud-proof.yml` is **manual (`workflow_dispatch`) only**, so no repeated paid runs occur on commits. It:
+**Current publication blocker:** the workflow file is prepared on the owner's Mac, but GitHub rejected its initial upload because the existing OAuth token lacks the `workflow` scope. Publishing it requires separate interactive GitHub authorization; no workflow run has been claimed yet.
+
+The planned workflow `.github/workflows/neatlogs-cloud-proof.yml` is **manual (`workflow_dispatch`) only**, so no repeated paid runs occur on commits. It:
 
 1. Runs the installed stable Neatlogs SDK's local Doctor v2, checking `format_version=neatlogs.doctor/v2`, `runtime.language=python`, `schema_version=2`.
 2. Runs `python -m neatlogs doctor --probe --json` with the secret. PASS requires **exact four-span finalized authenticated readback**, not merely HTTP accepted or exporter flushed.
