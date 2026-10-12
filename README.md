@@ -1,6 +1,6 @@
 # NeatRescue — Don't ship a fix that breaks someone else
 
-**neatHack 2026 · team SFAB (solo entry) · [Watch the 90-second demo](https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4) · [Interactive preview](https://neatrescue-demo-2026.onrender.com/) · [Dated build log](hackathon.md)**
+**neatHack 2026 · team SFAB (solo entry) · [Watch the complete 2:10 demo with all three sponsors](https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_20261012.mp4) · [Interactive preview](https://neatrescue-demo-2026.onrender.com/) · [Dated build log](hackathon.md)**
 
 An AI-agent repair proposal can make one failing example green while quietly rejecting legitimate customer operations. **NeatRescue investigates the failure, challenges plausible partial repairs, and prevents an unverified patch from being accepted.**
 
@@ -74,7 +74,7 @@ The real agent run requires Entire's `entire-graph` executable at `.tools/entire
 - `evidence/{faulty_adapter,proposed_order_only_fix,accepted_source,direct_source}.py` — compared actual source.
 - `evidence/ENTIRE_CHECKPOINT.json` — recorded Entire checkpoint provenance.
 - `docs/DURABLE_GATE_LEDGER_RESULTS_20261010.md` — design, recovery constraints, failure caveats.
-- `media/NeatRescue_VOICE_CUT_90s.mp4` — **90-second English-narrated recorded evidence visualization**, not a filmed live run; voice generated with Kokoro. The silent 140-second backup is retained in the media folder.
+- `media/NeatRescue_SFAB_Judge_Demo_20261012.mp4` — **130-second narrated competition video** including grounded Neatlogs, Entire, and cfo.ai evidence cards and accurate claim limits; audio synthesized with Kokoro. The earlier 90-second narrated and silent 140-second drafts remain in the media folder.
 
 ## Sponsor integration status — evidence, not logos
 

@@ -12,7 +12,7 @@
 
 **Public demo:** https://neatrescue-demo-2026.onrender.com/
 
-**Direct 90-second video:** https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4
+**Direct 2:10 judge video (all three sponsors):** https://neatrescue-demo-2026.onrender.com/media/NeatRescue_SFAB_Judge_Demo_20261012.mp4
 
 **Short project description (paste to form):**
 
@@ -24,7 +24,7 @@ NeatRescue is an AI-agent investigation and independent release-gate prototype. 
 - Neatlogs: SDK Doctor local and authenticated cloud probe **PASS**; actual 3-candidate synthetic SQLite workflow **persisted and read back from the cloud** with one named workflow and three tool-call spans. [Strict CI success](https://github.com/Abdullah-m7/neat-rescue/actions/runs/38249294070) and [sanitized evidence](../evidence/neatlogs_cloud_20261012/README.md). Recorded earlier model decisions are NOT claimed as new cloud LLM calls.
 - cfo.ai: SFAB supplied a 12-page business plan PDF and a 12-sheet XLSX forecast workbook on Oct 12, now archived unchanged in docs/cfo_ai/ with SHA-256 provenance, scenario findings and documented hypotheses. Real cfo.ai dashboard session not independently verified. Forecast revenue is not actual revenue.
 
-**Important limits:** Synthetic incident with no customers, real monetary transfers or production authorization; demo is a 90-second recorded evidence visualization narrated using Kokoro, not a filmed live deployment.
+**Important limits:** Synthetic incident with no customers, real monetary transfers or production authorization; demo is a 130-second recorded evidence visualization narrated using Kokoro, showing the three sponsor contributions with evidence-backed visual cards, not a filmed live deployment.
 
 **Final submission checklist:**
 
