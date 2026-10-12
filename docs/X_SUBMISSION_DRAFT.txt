@@ -8,9 +8,9 @@ Broken: 4 payments. Plausible wrong fix: 1. Verified: 3.
 
 Team: [REGISTERED TEAM NAME]
 Builder: [YOUR NAME]
-Code: [PUBLIC GITHUB URL]
-Demo (140s): [PUBLIC VIDEO URL]
+Code: https://github.com/Abdullah-m7/neat-rescue
+Demo (140s): https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4
 
-Uses Entire source context; Neatlogs runtime tracing and cfo.ai plan evidence must be added once verified. This is a synthetic sandbox, not a real payment system.
+Entire context was used. Local Neatlogs tracing test passed; authenticated cloud trace and a cfo.ai-generated business plan must be attached before final submission. This is a synthetic sandbox, not a real payment system.
 
 [QUOTE THE OFFICIAL NEATLOGS SUBMISSION POST; do not post as an unlinked standalone tweet]

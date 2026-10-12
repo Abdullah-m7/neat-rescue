@@ -1,6 +1,6 @@
 # NeatRescue — Don't ship a fix that breaks someone else
 
-**neatHack 2026 · solo entry · [Watch the 90-second narrated demo](media/NeatRescue_VOICE_CUT_90s.mp4)**
+**neatHack 2026 · solo entry · [Watch the 90-second demo](https://neatrescue-demo-2026.onrender.com/media/NeatRescue_VOICE_CUT_90s.mp4) · [Interactive preview](https://neatrescue-demo-2026.onrender.com/) · [Dated build log](hackathon.md)**
 
 An AI-agent repair proposal can make one failing example green while quietly rejecting legitimate customer operations. **NeatRescue investigates the failure, challenges plausible partial repairs, and prevents an unverified patch from being accepted.**
 
@@ -94,4 +94,4 @@ The prototype covers four pure Python adapter functions and a small synthetic bu
 
 The cinematic hero image is **Adobe Firefly-generated illustration**, not footage of an actual customer.
 
-**Submission state:** Source/video backup prepared for review; public repo activation, sponsor proofs and social submission remain owner-gated. Official rules: https://neatlogs.com/hackathon.
+**Submission state (Oct 12):** Public GitHub repository and Render demo are live and externally accessible. Entire evidence and Neatlogs local SDK test are documented. Authenticated Neatlogs cloud traces, a genuine cfo.ai-generated business plan, participant check-in and the official X quote post are still unverified. **This has not yet been formally submitted.** Official rules: https://neatlogs.com/hackathon.
